@@ -20,7 +20,7 @@ def parse_tweets(file_path):
         file.close()
     
     except FileNotFoundError:
-        print("File could not found")
+        print("Tweet file could not found")
         quit()
 
     
@@ -114,7 +114,13 @@ if __name__ == '__main__':
 
     #if user wants to add a tweet to the graph
     if args.add_tweet:
-        insert_to_graph(str(args.add_tweet))
-        new_avg_degree = calculate_avg_degree()
-        print("new average degree: ", new_avg_degree)
+        try:
+            with open(args.add_tweet) as input:
+                tweet = json.load(input)
+                insert_to_graph(json.dumps(tweet))
+                new_avg_degree = calculate_avg_degree()
+                print("new average degree: ", new_avg_degree)
+        except FileNotFoundError:
+            print("Input file could not found")
+            quit()
         
