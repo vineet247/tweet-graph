@@ -121,6 +121,15 @@ if __name__ == '__main__':
                 new_avg_degree = calculate_avg_degree()
                 print("new average degree: ", new_avg_degree)
         except FileNotFoundError:
-            print("Input file could not found")
+            print("Input file could not found. Cannot insert tweet to graph")
             quit()
-        
+    
+    #if user wants to delete a tweet to the graph
+    if args.delete_tweet:
+        try:
+            with open(args.delete_tweet) as input:
+                tweet = json.load(input)
+                print("new average degree: ", delete_from_graph(json.dumps(tweet)))
+        except FileNotFoundError:
+            print("Input file could not found. Cannot delete tweet from graph")
+            quit()
