@@ -1,35 +1,35 @@
 {
-    "created_at": "Thu Oct 29 17:51:50 +0000 2015",
-    "id": 659789756637823000,
-    "id_str": "659789756637822976",
-    "text": "@KayKay121 dragged me/to the library. Now I have to be productive 💔 https://t.co/HjZR3d5QaQ",
-    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "created_at": "Fri Oct 30 15:29:44 +0000 2015",
+    "id": 660116384035299300,
+    "id_str": "660116384035299332",
+    "text": "How is Trump Doing in the Polls https://t.co/1euweGx6SF #Trump #Election #News",
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
     "truncated": false,
     "in_reply_to_status_id": null,
     "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": 42353977,
-    "in_reply_to_user_id_str": "42353977",
-    "in_reply_to_screen_name": "KayKay121",
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
     "user": {
-        "id": 317846866,
-        "id_str": "317846866",
-        "name": "BaddieWinkleIsBae",
-        "screen_name": "WhoIsPetlo",
-        "location": "Polokwane | Grahamstown ",
+        "id": 3773377247,
+        "id_str": "3773377247",
+        "name": "Jessica Higgins",
+        "screen_name": "jessica_ny4",
+        "location": null,
         "url": null,
-        "description": "Extrovert",
+        "description": null,
         "protected": false,
         "verified": false,
-        "followers_count": 767,
-        "friends_count": 393,
+        "followers_count": 4,
+        "friends_count": 44,
         "listed_count": 0,
-        "favourites_count": 891,
-        "statuses_count": 41162,
-        "created_at": "Wed Jun 15 15:31:30 +0000 2011",
-        "utc_offset": -10800,
-        "time_zone": "Greenland",
+        "favourites_count": 0,
+        "statuses_count": 6401,
+        "created_at": "Fri Sep 25 17:46:33 +0000 2015",
+        "utc_offset": -25200,
+        "time_zone": "Pacific Time (US & Canada)",
         "geo_enabled": true,
-        "lang": "en",
+        "lang": "de",
         "contributors_enabled": false,
         "is_translator": false,
         "profile_background_color": "C0DEED",
@@ -41,9 +41,8 @@
         "profile_sidebar_fill_color": "DDEEF6",
         "profile_text_color": "333333",
         "profile_use_background_image": true,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/659384066798694401/Ogdtb4HJ_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/659384066798694401/Ogdtb4HJ_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/317846866/1443969906",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/647468484495044608/PXZtZBQV_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/647468484495044608/PXZtZBQV_normal.jpg",
         "default_profile": true,
         "default_profile_image": false,
         "following": null,
@@ -53,32 +52,32 @@
     "geo": null,
     "coordinates": null,
     "place": {
-        "id": "59efa64f5c8f5340",
-        "url": "https://api.twitter.com/1.1/geo/id/59efa64f5c8f5340.json",
-        "place_type": "city",
-        "name": "Grahamstown",
-        "full_name": "Grahamstown, South Africa",
-        "country_code": "ZA",
-        "country": "South Africa",
+        "id": "94965b2c45386f87",
+        "url": "https://api.twitter.com/1.1/geo/id/94965b2c45386f87.json",
+        "place_type": "admin",
+        "name": "New York",
+        "full_name": "New York, USA",
+        "country_code": "US",
+        "country": "United States",
         "bounding_box": {
             "type": "Polygon",
             "coordinates": [
                 [
                     [
-                        26.479477,
-                        -33.326355
+                        -79.76259,
+                        40.477383
                     ],
                     [
-                        26.479477,
-                        -33.270332
+                        -79.76259,
+                        45.015851
                     ],
                     [
-                        26.560003,
-                        -33.270332
+                        -71.777492,
+                        45.015851
                     ],
                     [
-                        26.560003,
-                        -33.326355
+                        -71.777492,
+                        40.477383
                     ]
                 ]
             ]
@@ -90,117 +89,47 @@
     "retweet_count": 0,
     "favorite_count": 0,
     "entities": {
-        "hashtags": [],
-        "urls": [],
-        "user_mentions": [
+        "hashtags": [
             {
-                "screen_name": "KayKay121",
-                "name": "KK_Rakitla95",
-                "id": 42353977,
-                "id_str": "42353977",
+                "text": "Trump",
                 "indices": [
-                    0,
-                    10
+                    56,
+                    62
+                ]
+            },
+            {
+                "text": "Election",
+                "indices": [
+                    63,
+                    72
+                ]
+            },
+            {
+                "text": "News",
+                "indices": [
+                    73,
+                    78
                 ]
             }
         ],
-        "symbols": [],
-        "media": [
+        "urls": [
             {
-                "id": 659789679491858400,
-                "id_str": "659789679491858432",
+                "url": "https://t.co/1euweGx6SF",
+                "expanded_url": "http://latestnews2016presidentialelection.com",
+                "display_url": "latestnews2016presidentialelection.com",
                 "indices": [
-                    68,
-                    91
-                ],
-                "media_url": "http://pbs.twimg.com/tweet_video_thumb/CSgLN8CUwAAzgez.png",
-                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/CSgLN8CUwAAzgez.png",
-                "url": "https://t.co/HjZR3d5QaQ",
-                "display_url": "pic.twitter.com/HjZR3d5QaQ",
-                "expanded_url": "http://twitter.com/WhoIsPetlo/status/659789756637822976/photo/1",
-                "type": "photo",
-                "sizes": {
-                    "thumb": {
-                        "w": 150,
-                        "h": 150,
-                        "resize": "crop"
-                    },
-                    "small": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    },
-                    "large": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    },
-                    "medium": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    }
-                }
+                    32,
+                    55
+                ]
             }
-        ]
-    },
-    "extended_entities": {
-        "media": [
-            {
-                "id": 659789679491858400,
-                "id_str": "659789679491858432",
-                "indices": [
-                    68,
-                    91
-                ],
-                "media_url": "http://pbs.twimg.com/tweet_video_thumb/CSgLN8CUwAAzgez.png",
-                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/CSgLN8CUwAAzgez.png",
-                "url": "https://t.co/HjZR3d5QaQ",
-                "display_url": "pic.twitter.com/HjZR3d5QaQ",
-                "expanded_url": "http://twitter.com/WhoIsPetlo/status/659789756637822976/photo/1",
-                "type": "animated_gif",
-                "sizes": {
-                    "thumb": {
-                        "w": 150,
-                        "h": 150,
-                        "resize": "crop"
-                    },
-                    "small": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    },
-                    "large": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    },
-                    "medium": {
-                        "w": 300,
-                        "h": 300,
-                        "resize": "fit"
-                    }
-                },
-                "video_info": {
-                    "aspect_ratio": [
-                        1,
-                        1
-                    ],
-                    "variants": [
-                        {
-                            "bitrate": 0,
-                            "content_type": "video/mp4",
-                            "url": "https://pbs.twimg.com/tweet_video/CSgLN8CUwAAzgez.mp4"
-                        }
-                    ]
-                }
-            }
-        ]
+        ],
+        "user_mentions": [],
+        "symbols": []
     },
     "favorited": false,
     "retweeted": false,
     "possibly_sensitive": false,
     "filter_level": "low",
     "lang": "en",
-    "timestamp_ms": "1446141110940"
+    "timestamp_ms": "1446218984980"
 }
