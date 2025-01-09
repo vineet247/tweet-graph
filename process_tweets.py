@@ -123,7 +123,7 @@ if __name__ == '__main__':
     #if user wants to add a tweet to the graph
     if args.add_tweet:
         try:
-            with open(args.add_tweet) as input:
+            with open(args.add_tweet, encoding="utf-8") as input:
                 tweet = json.load(input)
                 insert_to_graph(json.dumps(tweet))
                 new_avg_degree = calculate_avg_degree()
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     #if user wants to delete a tweet to the graph
     if args.delete_tweet:
         try:
-            with open(args.delete_tweet) as input:
+            with open(args.delete_tweet, encoding="utf-8") as input:
                 tweet = json.load(input)
                 print("new average degree: ", delete_from_graph(json.dumps(tweet)))
         except FileNotFoundError:
