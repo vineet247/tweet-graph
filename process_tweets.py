@@ -43,22 +43,24 @@ def insert_to_graph(tweet):
         """
         for individual_tag in tag_list:
             if individual_tag not in tweet_graph.keys():
-                tweet_graph[individual_tag] = {}
+                tweet_graph[individual_tag] = {'tweets': [], 'hashtags':{}}
+                tweet_graph[individual_tag]['tweets'].append(tweet_string.get('text'))
                 for unique_tag in tag_list:
                     if unique_tag != individual_tag:
-                        if unique_tag in tweet_graph[individual_tag].keys():
-                            tweet_graph[individual_tag][unique_tag] += 1
+                        if unique_tag in tweet_graph[individual_tag]['hashtags'].keys():
+                            tweet_graph[individual_tag]['hashtags'][unique_tag] += 1
                         else:
-                            tweet_graph[individual_tag][unique_tag] = 1
+                            tweet_graph[individual_tag]['hashtags'][unique_tag] = 1
                     else:
                         continue
             else:
+                tweet_graph[individual_tag]['tweets'].append(tweet_string.get('text'))
                 for item in tag_list:
                     if item != individual_tag:
-                        if item in tweet_graph[individual_tag].keys():
-                            tweet_graph[individual_tag][item] += 1
+                        if item in tweet_graph[individual_tag]['hashtags'].keys():
+                            tweet_graph[individual_tag]['hashtags'][item] += 1
                         else:
-                            tweet_graph[individual_tag][item] = 1
+                            tweet_graph[individual_tag]['hashtags'][item] = 1
                        
                         
 #Function to calculate average degree
@@ -69,7 +71,7 @@ def calculate_avg_degree():
 
     for key in tweet_graph.keys():
         nodes += 1
-        sum_of_degrees += len(tweet_graph[key].keys())
+        sum_of_degrees += len(tweet_graph[key]['hashtags'].keys())
     
     return sum_of_degrees/nodes
 
@@ -86,16 +88,19 @@ def delete_from_graph(tweet):
             if tag not in tweet_graph.keys():
                 raise Exception("Tag not in tweet graph. Cannot be deleted")
 
+            if tweet_string.get('text') not in tweet_graph[tag]['tweets']:
+                raise Exception("Tweet not in original list of tweets. Cannot be deleted")
+
             for unique_tag in tag_list:
                 if tag not in tweet_graph.keys():
                     raise Exception("Tag not in tweet graph. Cannot be deleted")
 
                 if unique_tag != tag:
-                    tweet_graph[tag][unique_tag]-=1
-                    if tweet_graph[tag][unique_tag] <= 0:
-                        del tweet_graph[tag][unique_tag]
+                    tweet_graph[tag]['hashtags'][unique_tag]-=1
+                    if tweet_graph[tag]['hashtags'][unique_tag] <= 0:
+                        del tweet_graph[tag]['hashtags'][unique_tag]
     
-            if len(tweet_graph[tag].keys()) == 0:
+            if len(tweet_graph[tag]['hashtags'].keys()) == 0:
                 del tweet_graph[tag]
     return calculate_avg_degree()
     
