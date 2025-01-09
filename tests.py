@@ -58,6 +58,17 @@ class TestProcessTweets(unittest.TestCase):
             }
         }
 
+        self.tweet_to_be_deleted_exception = {
+            "text": "Real Madrid is the greatest team in the world #Madrid",
+            "entities": {
+                "hashtags":[
+                    {
+                        "text": "madrid"
+                    }
+                ]
+            }
+        }
+
     # Test if tweets are inserted to graph correctly
     def test_insert_to_graph(self):
         for item in self.tweets:
@@ -104,6 +115,15 @@ class TestProcessTweets(unittest.TestCase):
         self.assertEqual(expected_result, process_tweets.tweet_graph)
         self.assertEqual(new_avg, 1.0)
 
+    # Test exception handling for tweet deletion
+    def test_delete_from_graph_exception(self):
+        for item in self.tweets:
+            process_tweets.insert_to_graph(json.dumps(item))
+        
+        with self.assertRaises(Exception) as assert_exception:
+            process_tweets.delete_from_graph(json.dumps(self.tweet_to_be_deleted_exception))
+        
+        self.assertEqual(assert_exception.exception.args[0], "Tag not in tweet graph. Cannot be deleted")
 
 if __name__=='__main__':
     unittest.main()
