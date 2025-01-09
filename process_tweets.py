@@ -94,6 +94,9 @@ def delete_from_graph(tweet):
                     tweet_graph[tag][unique_tag]-=1
                     if tweet_graph[tag][unique_tag] <= 0:
                         del tweet_graph[tag][unique_tag]
+    
+            if len(tweet_graph[tag].keys()) == 0:
+                del tweet_graph[tag]
     return calculate_avg_degree()
     
                     
