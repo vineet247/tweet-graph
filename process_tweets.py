@@ -11,7 +11,7 @@ def parse_tweets(file_path):
     """
     global tweet_graph
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()
         
             for line in lines:
